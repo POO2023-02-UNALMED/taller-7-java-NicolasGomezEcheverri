@@ -1,21 +1,20 @@
 package comunicacion;
-import java.util.ArrayList;
 
 public class Alfabeto extends Pictograma {
 
-    private static ArrayList<String> letras = new ArrayList<String>();
+    private static String[] letras;
     private String interpretacion;
 
-    public Alfabeto(String origen, String interpretacion) {
+    public Alfabeto(String origen, String[] letras, String interpretacion) {
         super(origen);
         this.interpretacion = interpretacion;
     }
 
-    public static ArrayList<String> getLetras() {
+    public static String[] getLetras() {
         return letras;
     }
 
-    public static void setLetras(ArrayList<String> letras) {
+    public static void setLetras(String[] letras) {
         Alfabeto.letras = letras;
     }
 
@@ -32,6 +31,6 @@ public class Alfabeto extends Pictograma {
     }
 
     public int cantidadLetras() {
-        return letras.size();
+        return letras.length;
     }
 }
